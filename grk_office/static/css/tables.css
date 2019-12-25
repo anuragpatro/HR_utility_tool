@@ -1,0 +1,61 @@
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+    background-color: azure;
+	color: black;
+}
+table{
+	background-color: beige;
+	text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+th, td {
+	border: 1px solid black;
+    border-collapse: collapse;
+	padding: 5px;
+	text-align: left;    
+}
+div
+{
+	align-content: center;
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+h1
+{
+	text-decoration: underline;	
+	color: black;
+	text-align: center;
+	font-style: italic;
+	font-size: xx-large;
+}
+div.info_retrieval
+{
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	line-height: 2;
+}
+p.heading
+{
+	font-size: medium;
+	text-decoration: underline;
+}
+
+.submit
+{
+	font-size: medium;
+	font-weight: bold;
+}

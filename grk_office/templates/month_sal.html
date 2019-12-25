@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Monthly Salary list</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/tables.css' %}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!-- Salary -->
+    <h1>Requested Monthly Salary Details</h1>
+	<div class="salary" id="salary">
+            <table  class = "center">
+                <tr>
+                    <th>Employee</th>
+                    <th>Basic Pay</th>
+                    <th>HRA</th>
+                    <th>Transport Allowance</th>
+                    <th>Medical Allowance</th>
+                    <th>Professional Update</th>
+                    <th>Special Allowance</th>
+                    <th>Professional Tax</th>
+                    <th>Variable Pay</th>
+                    <th>PF</th>                
+                    <th>ESI</th>
+                    <th>Total Salary</th>
+                </tr>
+                {% for emp in lists %}
+                <tr>
+                    {% for item in emp %}
+                        <td>{{item}}</td>
+                    {% endfor %}
+                </tr>
+                <br>
+                {% endfor %}
+            </table  class = "center">
+            
+    
+        </div>
+
+    <!-- 
+        Method to take attendance data by code, instead of admin site table
+        Not implemented
+    -->
+    <!-- <form action="add_query" method = "post">
+        {% csrf_token %}
+        Choose person : <input list="people" name = "emp">
+        <datalist id = "people">
+            {% for person in employees %}
+            <option value = {{person.name}}></option>
+            {% endfor %}
+        </datalist>
+        Number of days present : <input type="number" name='present' min = 0 max = 31>
+        <input type="submit" value="Add to list">
+    </form> -->
+</body>
+</html>

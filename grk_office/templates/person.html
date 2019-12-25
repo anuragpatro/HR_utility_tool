@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Employee Data</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/tables.css' %}">
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- People -->
+    <h1>Employee Data</h1>
+	<div class="people" id="people">
+        <table  class = "center">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
+                <th>QUALIFICATION</th>
+                <th>DATE OF BIRTH</th>
+                <th>PAN CARD</th>
+                <th>AADHAAR NUMBER</th>
+                <th>LOCAL ADDRESS</th>
+                <th>PERMANENT ADDRESS</th>                
+                <th>DATE OF JOINING</th>
+                <th>DESIGNATION</th>
+            </tr>
+            {% for person in employees %}
+            <tr>
+                <td>{{person.id}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.email}}</td>
+                <td>{{person.phone}}</td>
+                <td>{{person.qualification}}</td>
+                <td>{{person.dateofbirth}}</td>
+                <td>{{person.pannum}}</td>                
+                <td>{{person.aadhar}}</td>
+                <td>{{person.laddress}}</td>
+                <td>{{person.paddress}}</td>
+                <td>{{person.dateofjoin}}</td>
+                <td>{{person.designation}}</td>
+            </tr>
+            <br>
+            {% endfor %}
+        </table>
+        
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Employee Salary</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/tables.css' %}">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!-- Salary -->
+    <h1>Employee Salary Details</h1>
+	<div class="salary" id="salary">
+        <table class = "center">
+            <tr>
+                <th>Employee</th>
+                <th>Basic Pay</th>
+                <th>HRA</th>
+                <th>Transport Allowance</th>
+                <th>Medical Allowance</th>
+                <th>Professional Update</th>
+                <th>Special Allowance</th>
+                <th>Professional Tax</th>
+                <th>Variable Pay</th>
+                <th>PF</th>                
+                <th>ESI</th>
+            </tr>
+            {% for emp in lists %}
+            <tr>
+                <td>{{emp.person.name}}</td>
+                <td>{{emp.basicpay}}</td>
+                <td>{{emp.hra}}</td>
+                <td>{{emp.transport}}</td>
+                <td>{{emp.medical}}</td>
+                <td>{{emp.prof_update}}</td>
+                <td>{{emp.special_allowance}}</td>                
+                <td>{{emp.prof_tax}}</td>
+                <td>{{emp.variable_pay}}</td>
+                <td>{{emp.PF}}</td>
+                <td>{{emp.ESI}}</td>
+            </tr>
+            <br>
+            {% endfor %}
+        </table>
+        
+
+    </div>
+    <br>
+    <div class = "info_retrieval">
+        <p class = "heading">Fill below details to avail monthly salary data by attendance</p>
+        <!-- Monthly query -->
+
+        <form action="monthly" method='post'>
+
+            {% csrf_token %}    
+            Enter month : <input list = "months" name = "current_month">
+            <datalist id = 'months'>
+                <option value = 'January'>
+                <option value = 'February'>
+                <option value = 'March'>
+                <option value = 'April'>
+                <option value = 'May'>
+                <option value = 'June'>
+                <option value = 'July'>
+                <option value = 'August'>
+                <option value = 'September'>
+                <option value = 'October'>
+                <option value = 'November'>
+                <option value = 'December'>            
+            </datalist>
+            <br>
+            Enter year : <input type="number" name = 'current_year' min=2013 max = {{c_year}}>
+            <br>
+            Enter number of working days : <input type="number" name = 'present' min = 0 max = 31>
+            <br>
+            <input type="submit" class ="submit">
+        
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+    background-color: azure;
+	color: black;
+}
+.header
+{
+    width : 100%;
+    text-align: center;
+    background-color: azure;
+}
+.container
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+}
+.img_logo
+{
+    text-align: center;
+    margin : 0 auto;
+    padding : 10px;
+}
+
+.boxes
+{
+    align-content : center;
+    margin : 20px auto;
+    background-color: antiquewhite;
+    text-align : center;
+    padding : 20px;    
+    width : fit-content;
+    font-size: medium;
+}
