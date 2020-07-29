@@ -1,6 +1,6 @@
 ## HR-Utility Tool created for GRK Research Pvt. Ltd. 
 
-#Web Application
+### Web Application
 - Handles monthly and yearly financial records
 - Delivers spreadsheets for monthly salary distribution
 - Records employee details
